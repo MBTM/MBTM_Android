@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MBTM</string>
+    <string name="sub_title">MBTI와 관련된 모든 것</string>
+    <string name="title">MBTM</string>
+    <string name="signup">회원가입</string>
+    <string name="login">로그인</string>
 </resources>

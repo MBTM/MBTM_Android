@@ -10,7 +10,34 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
     </style>
+
+    <style name="appName">
+        <item name="android:textColor">@color/main</item>
+        <item name="android:textSize">52sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="loginBox">
+        <item name="android:background">@drawable/background_login_box</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textColor">#D8D8D8</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="loginButton">
+        <item name="android:background">@drawable/button_login_background</item>
+        <item name="android:text">@string/login</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+
 </resources>
