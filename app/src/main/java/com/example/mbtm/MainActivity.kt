@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 //            val editor = pref.edit()
 //            editor.putBoolean("checkFirst", true)
 //            editor.commit()
-            startActivity(Intent(this, FirstActivity::class.java))
+            startActivity(Intent(this, StartMBTMActivity::class.java))
 //        }
     }
 }

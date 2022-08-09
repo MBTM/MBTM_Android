@@ -33,28 +33,17 @@
 
     <TextView
         android:id="@+id/first_login_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/purpleButton"
         android:layout_marginBottom="24dp"
-        android:width="320dp"
-        android:height="48dp"
-        style="@style/loginButton"
-        app:layout_constraintBottom_toTopOf="@id/first_signup_btn"
+        android:text="@string/login"
+        app:layout_constraintBottom_toTopOf="@id/first_sign_up_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/first_signup_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="320dp"
-        android:height="48dp"
-        android:background="@drawable/button_signup_background"
-        android:gravity="center"
+        android:id="@+id/first_sign_up_btn"
+        style="@style/whitePurpleButton"
         android:text="@string/signup"
-        android:textAlignment="center"
-        android:textColor="@color/main"
-        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

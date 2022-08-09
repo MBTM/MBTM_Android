@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".SignUpActivity">
+
+        <TextView
+            android:id="@+id/sign_up_app_title_tv"
+            style="@style/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:text="@string/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sign_up_sub_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_app_title_tv" />
+
+        <TextView
+            android:id="@+id/sign_up_id_tv"
+            style="@style/signUpInputTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="아이디 입력"
+            app:layout_constraintStart_toStartOf="@id/sign_up_id_et"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_sub_title_tv" />
+
+        <EditText
+            android:id="@+id/sign_up_id_et"
+            style="@style/SignUpBox"
+            android:hint="아이디"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_id_tv" />
+
+        <TextView
+            android:id="@+id/sign_up_password_tv"
+            style="@style/signUpInputTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="비밀번호 입력"
+            app:layout_constraintStart_toStartOf="@id/sign_up_password_et"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_id_et" />
+
+
+        <EditText
+            android:id="@+id/sign_up_password_et"
+            style="@style/SignUpBox"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_password_tv" />
+
+
+        <TextView
+            android:id="@+id/sign_up_password_confirm_tv"
+            style="@style/signUpInputTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="비밀번호 확인"
+            app:layout_constraintStart_toStartOf="@id/sign_up_password_confirm_et"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_password_et" />
+
+
+        <EditText
+            android:id="@+id/sign_up_password_confirm_et"
+            style="@style/SignUpBox"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_password_confirm_tv" />
+
+
+        <TextView
+            android:id="@+id/sign_up_email_tv"
+            style="@style/signUpInputTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="이메일 주소 입력"
+            app:layout_constraintStart_toStartOf="@id/sign_up_email_et"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_password_confirm_et" />
+
+
+        <EditText
+            android:id="@+id/sign_up_email_et"
+            style="@style/SignUpBox"
+            android:layout_marginBottom="32dp"
+            android:hint="이메일"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_email_tv" />
+
+
+        <TextView
+            android:id="@+id/sign_up_phone_tv"
+            style="@style/signUpInputTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="전화번호 입력"
+            app:layout_constraintStart_toStartOf="@id/sign_up_phone_et"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_email_et" />
+
+
+        <EditText
+            android:id="@+id/sign_up_phone_et"
+            style="@style/SignUpBox"
+            android:layout_marginBottom="32dp"
+            android:hint="전화번호"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_phone_tv" />
+
+
+        <TextView
+            style="@style/purpleButton"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="138dp"
+            android:text="다음"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_phone_et" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
