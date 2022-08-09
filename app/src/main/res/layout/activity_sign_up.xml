@@ -142,6 +142,7 @@
 
 
         <TextView
+            android:id="@+id/sign_up_next_btn"
             style="@style/purpleButton"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="138dp"

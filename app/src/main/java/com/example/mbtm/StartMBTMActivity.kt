@@ -29,7 +29,7 @@ class StartMBTMActivity : AppCompatActivity() {
         binding.startStartBtn.setOnClickListener {
             if (binding.startMbtmRg.selectedRadioButtonId != null) {
                 userMbti = mbtiArray[binding.startMbtmRg.selectedRadioButtonId!!]
-                binding.startStartBtn.text = mbtiArray[binding.startMbtmRg.selectedRadioButtonId!!]
+                Toast.makeText(this, userMbti + "이시군요", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, FirstActivity::class.java))
             } else {
                 Toast.makeText(this, "MBTI를 선택해주세요", Toast.LENGTH_SHORT).show()
