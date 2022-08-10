@@ -3,4 +3,12 @@
     android:shape="rectangle">
     <corners android:radius="4dp" />
     <solid android:color="#33A6C151"/>
+
+    <item android:state_pressed="false">
+        <shape>
+            <solid android:color="#c0c0c0" />
+        </shape>
+    </item>
+
 </shape>
+

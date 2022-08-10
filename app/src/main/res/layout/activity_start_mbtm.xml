@@ -51,81 +51,114 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/start_mbtm_sub_title_tv">
 
-            <RadioButton style="@style/signUpMbtiIstj" />
 
-            <RadioButton style="@style/signUpMbtiIsfj" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_istj_btn"
+                style="@style/signUpMbtiIstj" />
 
-            <RadioButton style="@style/signUpMbtiInfj" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_isfj_btn"
+                style="@style/signUpMbtiIsfj" />
 
-            <RadioButton style="@style/signUpMbtiIntj" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_infj_btn"
+                style="@style/signUpMbtiInfj" />
 
-            <RadioButton style="@style/signUpMbtiIstp" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_intj_btn"
+                style="@style/signUpMbtiIntj" />
 
-            <RadioButton style="@style/signUpMbtiIsfp" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_istp_btn"
+                style="@style/signUpMbtiIstp" />
 
-            <RadioButton style="@style/signUpMbtiInfp" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_isfp_btn"
+                style="@style/signUpMbtiIsfp" />
 
-            <RadioButton style="@style/signUpMbtiIntp" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_infp_btn"
+                style="@style/signUpMbtiInfp" />
 
-            <RadioButton style="@style/signUpMbtiEstp" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_intp_btn"
+                style="@style/signUpMbtiIntp" />
 
-            <RadioButton style="@style/signUpMbtiEsfp" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_estp_btn"
+                style="@style/signUpMbtiEstp" />
 
-            <RadioButton style="@style/signUpMbtiEnfp" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_esfp_btn"
+                style="@style/signUpMbtiEsfp" />
 
-            <RadioButton style="@style/signUpMbtiEntp" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_enfp_btn"
+                style="@style/signUpMbtiEnfp" />
 
-            <RadioButton style="@style/signUpMbtiEstj" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_entp_btn"
+                style="@style/signUpMbtiEntp" />
 
-            <RadioButton style="@style/signUpMbtiEsfj" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_estj_btn"
+                style="@style/signUpMbtiEstj" />
 
-            <RadioButton style="@style/signUpMbtiEnfj" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_esfj_btn"
+                style="@style/signUpMbtiEsfj" />
 
-            <RadioButton style="@style/signUpMbtiEntj" />
+            <RadioButton
+                android:id="@+id/sign_up_mbti_enfj_btn"
+                style="@style/signUpMbtiEnfj" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_entj_btn"
+                style="@style/signUpMbtiEntj" />
 
         </com.example.mbtm.gridRadioGroup>
 
 
-<!--        <com.example.mbtm.radioGridGroup-->
-<!--            android:id="@+id/grid_test"-->
-<!--            xmlns:grid="http://schemas.android.com/apk/res-auto"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            grid:columnCount="4">-->
+        <!--        <com.example.mbtm.radioGridGroup-->
+        <!--            android:id="@+id/grid_test"-->
+        <!--            xmlns:grid="http://schemas.android.com/apk/res-auto"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            grid:columnCount="4">-->
 
-<!--            <RadioButton style="@style/signUpMbtiIstj" />-->
+        <!--            <RadioButton style="@style/signUpMbtiIstj" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiIsfj" />-->
+        <!--            <RadioButton style="@style/signUpMbtiIsfj" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiInfj" />-->
+        <!--            <RadioButton style="@style/signUpMbtiInfj" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiIntj" />-->
+        <!--            <RadioButton style="@style/signUpMbtiIntj" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiIstp" />-->
+        <!--            <RadioButton style="@style/signUpMbtiIstp" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiIsfp" />-->
+        <!--            <RadioButton style="@style/signUpMbtiIsfp" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiInfp" />-->
+        <!--            <RadioButton style="@style/signUpMbtiInfp" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiIntp" />-->
+        <!--            <RadioButton style="@style/signUpMbtiIntp" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiEstp" />-->
+        <!--            <RadioButton style="@style/signUpMbtiEstp" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiEsfp" />-->
+        <!--            <RadioButton style="@style/signUpMbtiEsfp" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiEnfp" />-->
+        <!--            <RadioButton style="@style/signUpMbtiEnfp" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiEntp" />-->
+        <!--            <RadioButton style="@style/signUpMbtiEntp" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiEstj" />-->
+        <!--            <RadioButton style="@style/signUpMbtiEstj" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiEsfj" />-->
+        <!--            <RadioButton style="@style/signUpMbtiEsfj" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiEnfj" />-->
+        <!--            <RadioButton style="@style/signUpMbtiEnfj" />-->
 
-<!--            <RadioButton style="@style/signUpMbtiEntj" />-->
+        <!--            <RadioButton style="@style/signUpMbtiEntj" />-->
 
-<!--        </com.example.mbtm.radioGridGroup>-->
+        <!--        </com.example.mbtm.radioGridGroup>-->
 
         <!--                <RadioGroup-->
         <!--                    android:id="@+id/start_mbtm_rg"-->
