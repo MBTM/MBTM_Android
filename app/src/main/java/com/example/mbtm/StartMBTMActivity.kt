@@ -82,7 +82,8 @@ class StartMBTMActivity : AppCompatActivity() {
             if (binding.startMbtmRg.checkedCheckableImageButtonId == -1) {
                 Toast.makeText(this, "MBTI를 선택해주세요", Toast.LENGTH_SHORT).show()
             } else {
-                userMbti = mbtiArray[binding.startMbtmRg.checkedCheckableImageButtonId!! - 1]
+                val userMbti: String = (findViewById<RadioButton>(binding.startMbtmRg.checkedCheckableImageButtonId)).text as String
+//                userMbti = binding.startMbtmRg.checkedCheckableImageButtonId.text
                 Toast.makeText(this, userMbti + "이시군요", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, FirstActivity::class.java))
             }
