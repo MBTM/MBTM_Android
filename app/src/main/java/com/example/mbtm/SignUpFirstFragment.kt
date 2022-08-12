@@ -1,10 +1,19 @@
 package com.example.mbtm
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import com.example.mbtm.databinding.FragmentSignUpFirstBinding
+import kotlinx.coroutines.delay
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,16 +26,13 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SignUpFirstFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    lateinit var binding: FragmentSignUpFirstBinding
+    lateinit var navController: NavController
+    var isSuccess: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
@@ -34,7 +40,24 @@ class SignUpFirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up_first, container, false)
+
+        binding = FragmentSignUpFirstBinding.inflate(inflater, container, false)
+
+//        binding.signUpNextBtn.setOnClickListener {
+//            Toast.makeText(activity, "회원가입", Toast.LENGTH_SHORT).show()
+//            Log.d("OKOK/CALL-SIGNUP", "hello")
+//            signUp()
+//        }
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
+        binding.signUpNextBtn.setOnClickListener {
+            signUp()
+        }
     }
 
     companion object {
@@ -55,5 +78,57 @@ class SignUpFirstFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    private fun getUser(): User {
+        val id: String = binding.signUpIdEt.text.toString()
+        val pwd: String = binding.signUpPasswordEt.text.toString()
+        val pwdCheck: String = binding.signUpPasswordConfirmEt.text.toString()
+        val email: String = binding.signUpEmailEt.text.toString()
+        val phone: String = binding.signUpPhoneEt.text.toString()
+
+        return User(id = id, password = pwd, passwordCheck = pwdCheck, email = email, phone = phone)
+
+    }
+
+    private fun signUp() {
+        if (binding.signUpIdEt.text.toString().isEmpty()) {
+            Toast.makeText(activity, "아이디를 입력해주세요", Toast.LENGTH_SHORT).show()
+        } else if (binding.signUpPasswordEt.text.isEmpty()) {
+            Toast.makeText(activity, "비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show()
+        } else if (binding.signUpPasswordConfirmEt.text.isEmpty()) {
+            Toast.makeText(activity, "확인용 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show()
+        } else if (binding.signUpEmailEt.text.isEmpty()) {
+            Toast.makeText(activity, "이메일 주소를 입력해주세요", Toast.LENGTH_SHORT).show()
+        } else if (binding.signUpPhoneEt.text.isEmpty()) {
+            Toast.makeText(activity, "전화번호를 입력해주세요", Toast.LENGTH_SHORT).show()
+        }
+
+        val authService = getRetrofit().create(AuthRetrofitInterface::class.java)
+        authService.signUp(getUser()).enqueue(object : Callback<AuthResponse> {
+            override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
+                Log.d("OKOK/SIGNUP/SUCCESS", response.toString())
+                val resp: AuthResponse = response.body()!!
+                Log.d("OKOK/SIGNUP/CODE", resp.code.toString())
+                when (resp.code) {
+                    1000 -> {
+//                        isSuccess = true
+                        Toast.makeText(activity, "회원 가입에 성공하였습니다", Toast.LENGTH_SHORT).show()
+                        navController.navigate(R.id.action_firstFragment_to_secondFragment)
+                    }
+
+                    2032 -> {
+
+                    }
+
+                }
+            }
+
+            override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
+                Log.d("OKOK/SIGNUP/FAILURE", t.message.toString())
+            }
+
+        })
+        Log.d("OKOK/SIGNUP/FINISH", "SignUp Finish")
     }
 }

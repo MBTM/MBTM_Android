@@ -1,15 +1,14 @@
 package com.example.mbtm
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.example.mbtm.databinding.ActivitySignUpBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+
 
 class SignUpActivity : AppCompatActivity() {
     lateinit var binding: ActivitySignUpBinding
@@ -19,14 +18,16 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.signUpNextBtn.setOnClickListener {
-            Toast.makeText(this, "회원가입", Toast.LENGTH_SHORT).show()
-            Log.d("OKOK/CALL-SIGNUP", "hello")
-//            signUp()
-        }
+//        binding.signUpNextBtn.setOnClickListener {
+//            Toast.makeText(this, "회원가입", Toast.LENGTH_SHORT).show()
+//            Log.d("OKOK/CALL-SIGNUP", "hello")
+////            signUp()
+//        }
+
+//        binding.signUpFirstFv.
 
 //        SignUpVPadapter(this)
-        initAdapter()
+//        initAdapter()
     }
 
     private fun initAdapter() {
@@ -37,13 +38,17 @@ class SignUpActivity : AppCompatActivity() {
         signUpVPadapter.addFragment(SignUpSecondFragment())
 
         //ViewPager2와 Adapter 연동
-        binding.signUpInputVp.adapter = signUpVPadapter
+//        binding.signUpInputVp.adapter = signUpVPadapter
+//
+//        binding.signUpInputVp.setCurrentItem(2, true)
+
 
 //        signUpVPadapter.set(false);
 
 
-//    }
-//
+
+    }
+
 //    private fun getUser(): User {
 //        val id: String = binding.signUpIdEt.text.toString()
 //        val pwd: String = binding.signUpPasswordEt.text.toString()
@@ -89,7 +94,7 @@ class SignUpActivity : AppCompatActivity() {
 //            })
 //
 //            Log.d("OKOK/SIGNUP", "hello")
-//        }
-
-    }
+////        }
+//
+//    }
 }

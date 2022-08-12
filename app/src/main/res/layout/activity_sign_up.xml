@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -36,130 +34,154 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sign_up_app_title_tv" />
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/sign_up_input_vp"
-            android:layout_width="match_parent"
+
+        <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            app:defaultNavHost="true"
             app:layout_constraintTop_toBottomOf="@id/sign_up_sub_title_tv"
-            app:layout_constraintStart_toStartOf="parent"/>
-        <TextView
-            android:id="@+id/sign_up_next_btn"
-            style="@style/purpleButton"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="138dp"
-            android:text="다음"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sign_up_input_vp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:navGraph="@navigation/nav_signup" />
+
+        <!--        <androidx.viewpager2.widget.ViewPager2-->
+        <!--            android:id="@+id/sign_up_input_vp"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--                    android:layout_marginTop="20dp"-->
+        <!--                    app:layout_constraintTop_toBottomOf="@id/sign_up_sub_title_tv"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"/>-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/sign_up_next_btn"-->
+        <!--            style="@style/purpleButton"-->
+        <!--            android:layout_marginTop="32dp"-->
+        <!--            android:layout_marginBottom="138dp"-->
+        <!--            android:text="다음"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/sign_up_input_vp" />-->
+
+        <!--        <androidx.fragment.app.FragmentContainerView-->
+        <!--            android:id="@+id/sign_up_first_fv"-->
+        <!--            android:name="com.example.mbtm.SignUpFirstFragment"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            tools:layout_editor_absoluteX="236dp"-->
+        <!--            tools:layout_editor_absoluteY="151dp"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-<!--    <TextView-->
-<!--        android:id="@+id/sign_up_id_tv"-->
-<!--        style="@style/signUpInputTitle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="42dp"-->
-<!--        android:text="아이디 입력"-->
-<!--        app:layout_constraintStart_toStartOf="@id/sign_up_id_et"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_sub_title_tv" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/sign_up_id_tv"-->
+    <!--        style="@style/signUpInputTitle"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="42dp"-->
+    <!--        android:text="아이디 입력"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/sign_up_id_et"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_sub_title_tv" />-->
 
-<!--    <EditText-->
-<!--        android:id="@+id/sign_up_id_et"-->
-<!--        style="@style/SignUpBox"-->
-<!--        android:hint="아이디"-->
-<!--        android:inputType="text"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_id_tv" />-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/sign_up_id_et"-->
+    <!--        style="@style/SignUpBox"-->
+    <!--        android:hint="아이디"-->
+    <!--        android:inputType="text"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_id_tv" />-->
 
-<!--    <TextView-->
-<!--        android:id="@+id/sign_up_password_tv"-->
-<!--        style="@style/signUpInputTitle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="42dp"-->
-<!--        android:text="비밀번호 입력"-->
-<!--        app:layout_constraintStart_toStartOf="@id/sign_up_password_et"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_id_et" />-->
-
-
-<!--    <EditText-->
-<!--        android:id="@+id/sign_up_password_et"-->
-<!--        style="@style/SignUpBox"-->
-<!--        android:hint="비밀번호"-->
-<!--        android:inputType="textPassword"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_password_tv" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/sign_up_password_tv"-->
+    <!--        style="@style/signUpInputTitle"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="42dp"-->
+    <!--        android:text="비밀번호 입력"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/sign_up_password_et"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_id_et" />-->
 
 
-<!--    <TextView-->
-<!--        android:id="@+id/sign_up_password_confirm_tv"-->
-<!--        style="@style/signUpInputTitle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="42dp"-->
-<!--        android:text="비밀번호 확인"-->
-<!--        app:layout_constraintStart_toStartOf="@id/sign_up_password_confirm_et"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_password_et" />-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/sign_up_password_et"-->
+    <!--        style="@style/SignUpBox"-->
+    <!--        android:hint="비밀번호"-->
+    <!--        android:inputType="textPassword"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_password_tv" />-->
 
 
-<!--    <EditText-->
-<!--        android:id="@+id/sign_up_password_confirm_et"-->
-<!--        style="@style/SignUpBox"-->
-<!--        android:hint="비밀번호"-->
-<!--        android:inputType="textPassword"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_password_confirm_tv" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/sign_up_password_confirm_tv"-->
+    <!--        style="@style/signUpInputTitle"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="42dp"-->
+    <!--        android:text="비밀번호 확인"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/sign_up_password_confirm_et"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_password_et" />-->
 
 
-<!--    <TextView-->
-<!--        android:id="@+id/sign_up_email_tv"-->
-<!--        style="@style/signUpInputTitle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="42dp"-->
-<!--        android:text="이메일 주소 입력"-->
-<!--        app:layout_constraintStart_toStartOf="@id/sign_up_email_et"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_password_confirm_et" />-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/sign_up_password_confirm_et"-->
+    <!--        style="@style/SignUpBox"-->
+    <!--        android:hint="비밀번호"-->
+    <!--        android:inputType="textPassword"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_password_confirm_tv" />-->
 
 
-<!--    <EditText-->
-<!--        android:id="@+id/sign_up_email_et"-->
-<!--        style="@style/SignUpBox"-->
-<!--        android:layout_marginBottom="32dp"-->
-<!--        android:hint="이메일"-->
-<!--        android:inputType="textEmailAddress"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_email_tv" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/sign_up_email_tv"-->
+    <!--        style="@style/signUpInputTitle"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="42dp"-->
+    <!--        android:text="이메일 주소 입력"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/sign_up_email_et"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_password_confirm_et" />-->
 
 
-<!--    <TextView-->
-<!--        android:id="@+id/sign_up_phone_tv"-->
-<!--        style="@style/signUpInputTitle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="42dp"-->
-<!--        android:text="전화번호 입력"-->
-<!--        app:layout_constraintStart_toStartOf="@id/sign_up_phone_et"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_email_et" />-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/sign_up_email_et"-->
+    <!--        style="@style/SignUpBox"-->
+    <!--        android:layout_marginBottom="32dp"-->
+    <!--        android:hint="이메일"-->
+    <!--        android:inputType="textEmailAddress"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_email_tv" />-->
 
 
-<!--    <EditText-->
-<!--        android:id="@+id/sign_up_phone_et"-->
-<!--        style="@style/SignUpBox"-->
-<!--        android:layout_marginBottom="32dp"-->
-<!--        android:hint="전화번호"-->
-<!--        android:inputType="phone"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/sign_up_phone_tv" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/sign_up_phone_tv"-->
+    <!--        style="@style/signUpInputTitle"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="42dp"-->
+    <!--        android:text="전화번호 입력"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/sign_up_phone_et"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_email_et" />-->
+
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/sign_up_phone_et"-->
+    <!--        style="@style/SignUpBox"-->
+    <!--        android:layout_marginBottom="32dp"-->
+    <!--        android:hint="전화번호"-->
+    <!--        android:inputType="phone"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/sign_up_phone_tv" />-->
 
 
 </ScrollView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_signup"
+    app:startDestination="@id/sign_up_first_fragment">
+
+    <fragment
+        android:id="@+id/sign_up_first_fragment"
+        android:name="com.example.mbtm.SignUpFirstFragment"
+        android:label="fragment_sign_up_first"
+        tools:layout="@layout/fragment_sign_up_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/sign_up_second_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sign_up_second_fragment"
+        android:name="com.example.mbtm.SignUpSecondFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_sign_up_second" />
+
+</navigation>
