@@ -40,7 +40,7 @@
         android:layout_marginTop="42dp"
         android:text="비밀번호 입력"
         app:layout_constraintStart_toStartOf="@id/sign_up_password_et"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_id_et" />
+        app:layout_constraintTop_toBottomOf="@id/sign_up_id_error_tv" />
 
 
     <EditText
@@ -89,7 +89,7 @@
         android:layout_marginTop="42dp"
         android:text="이메일 주소 입력"
         app:layout_constraintStart_toStartOf="@id/sign_up_email_et"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_password_confirm_et" />
+        app:layout_constraintTop_toBottomOf="@id/sign_up_password_check_error_tv" />
 
 
     <EditText
@@ -116,7 +116,7 @@
         android:layout_marginTop="42dp"
         android:text="전화번호 입력"
         app:layout_constraintStart_toStartOf="@id/sign_up_phone_et"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_email_et" />
+        app:layout_constraintTop_toBottomOf="@id/sign_up_email_error_tv" />
 
 
     <EditText
@@ -133,8 +133,8 @@
     <TextView
         android:id="@+id/sign_up_phone_error_tv"
         style="@style/signUpErrorText"
-        app:layout_constraintStart_toStartOf="@id/sign_up_email_et"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_email_et" />
+        app:layout_constraintStart_toStartOf="@id/sign_up_phone_et"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_phone_et" />
 
     <TextView
         android:id="@+id/sign_up_next_btn"
@@ -144,6 +144,6 @@
         android:text="다음"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_phone_et" />
+        app:layout_constraintTop_toBottomOf="@id/sign_up_phone_error_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
