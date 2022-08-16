@@ -11,12 +11,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 //        val pref = getSharedPreferences("checkFirst", MODE_PRIVATE)
-//        val checkFirst = pref.getBoolean("checkFirst", false)
-//        if (!checkFirst) {
-//            val editor = pref.edit()
-//            editor.putBoolean("checkFirst", true)
+////        val checkFirst = pref.getBoolean("checkFirst", false)
+////        if (!checkFirst) {
+////            val editor = pref.edit()
+////            editor.putBoolean("checkFirst", true)
 //            editor.commit()
-            startActivity(Intent(this, FirstActivity::class.java))
+        startActivity(Intent(this, FirstActivity::class.java))
+//        val fragment_mbti = SignUpMbtiFragment()
+//        supportFragmentManager.beginTransaction().replace(R.id.sign_up_mbti_fragment, fragment_mbti).commit()
 //        }
     }
 }

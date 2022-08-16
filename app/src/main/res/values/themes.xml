@@ -29,15 +29,153 @@
         <item name="android:paddingLeft">16dp</item>
         <item name="android:textColor">#D8D8D8</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">320dp</item>
     </style>
 
-    <style name="loginButton">
-        <item name="android:background">@drawable/button_login_background</item>
-        <item name="android:text">@string/login</item>
+    <style name="SignUpBox">
+        <item name="android:background">@drawable/background_sign_up_box</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">40dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">320dp</item>
+    </style>
+
+    <style name="purpleButton">
+        <item name="android:background">@drawable/button_purple_background</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">320dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="whitePurpleButton">
+        <item name="android:background">@drawable/button_white_purple_background</item>
+        <item name="android:textColor">@color/main</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">320dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
 
+    <style name="signUpMbti">
+        <item name="android:layout_width">74dp</item>
+        <item name="android:layout_height">74dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:radius">4dp</item>
+        <item name="android:button">@android:color/transparent</item>
+    </style>
+
+    <style name="signUpMbtiIstj" parent="signUpMbti">
+        <item name="android:text">ISTJ</item>
+        <item name="android:background">#33798454</item>
+    </style>
+
+    <style name="signUpMbtiIsfj" parent="signUpMbti">
+        <item name="android:text">ISFJ</item>
+        <item name="android:background">#3332A694</item>
+    </style>
+
+    <style name="signUpMbtiInfj" parent="signUpMbti">
+        <item name="android:text">INFJ</item>
+        <item name="android:background">#33F37661</item>
+    </style>
+
+    <style name="signUpMbtiIntj" parent="signUpMbti">
+        <item name="android:text">INTJ</item>
+        <item name="android:background">#33A6C151</item>
+    </style>
+
+    <style name="signUpMbtiIstp" parent="signUpMbti">
+        <item name="android:text">ISTP</item>
+        <item name="android:background">#3373509B</item>
+    </style>
+
+    <style name="signUpMbtiIsfp" parent="signUpMbti">
+        <item name="android:text">ISFP</item>
+        <item name="android:background">#33CC3338</item>
+    </style>
+
+    <style name="signUpMbtiInfp" parent="signUpMbti">
+        <item name="android:text">INFP</item>
+        <item name="android:background">#33F57C26</item>
+    </style>
+
+    <style name="signUpMbtiIntp" parent="signUpMbti">
+        <item name="android:text">INTP</item>
+        <item name="android:background">#3377236D</item>
+    </style>
+
+    <style name="signUpMbtiEstp" parent="signUpMbti">
+        <item name="android:text">ESTP</item>
+        <item name="android:background">#3320B9F2</item>
+    </style>
+
+    <style name="signUpMbtiEsfp" parent="signUpMbti">
+        <item name="android:text">ESFP</item>
+        <item name="android:background">#33249551</item>
+    </style>
+
+    <style name="signUpMbtiEnfp" parent="signUpMbti">
+        <item name="android:text">ENFP</item>
+        <item name="android:background">#33E6AC2C</item>
+    </style>
+
+    <style name="signUpMbtiEntp" parent="signUpMbti">
+        <item name="android:text">ENTP</item>
+        <item name="android:background">#33166C78</item>
+    </style>
+
+    <style name="signUpMbtiEstj" parent="signUpMbti">
+        <item name="android:text">ESTJ</item>
+        <item name="android:background">#33A8C740</item>
+    </style>
+
+    <style name="signUpMbtiEsfj" parent="signUpMbti">
+        <item name="android:text">ESFJ</item>
+        <item name="android:background">#33DF3E74</item>
+    </style>
+
+    <style name="signUpMbtiEnfj" parent="signUpMbti">
+        <item name="android:text">ENFJ</item>
+        <item name="android:background">#331D3A65</item>
+    </style>
+
+    <style name="signUpMbtiEntj" parent="signUpMbti">
+        <item name="android:text">ENTJ</item>
+        <item name="android:background">#33DD5827</item>
+    </style>
+
+    <style name="signUpInputTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#4E4D4D</item>
+    </style>
+
+    <style name="signUpInputText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#4E4D4D</item>
+    </style>
+
+    <style name="signUpErrorText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">#EF5DA8</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="subTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

@@ -11,11 +11,15 @@ class FirstActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding =ActivityFirstBinding.inflate(layoutInflater)
+        binding = ActivityFirstBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.firstLoginBtn.setOnClickListener{
+        binding.firstLoginBtn.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+        binding.firstSignUpBtn.setOnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
         }
     }
 }
