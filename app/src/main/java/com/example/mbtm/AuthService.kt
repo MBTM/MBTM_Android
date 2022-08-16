@@ -12,14 +12,14 @@ class AuthService {
         this.signUpView = signUpView
     }
 
-    fun signUp(user: User) {
+    fun signUpFirst(user: User) {
         val authService = getRetrofit().create(AuthRetrofitInterface::class.java)
-        authService.signUp(user).enqueue(object : Callback<AuthResponse> {
+        authService.signUpFirst(user).enqueue(object : Callback<AuthResponse> {
             override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
                 val resp: AuthResponse = response.body()!!
                 when (val code = resp.code) {
-                    1000 -> signUpView.onSignUpSuccess(resp.code, resp.result!!)
-                    else -> signUpView.onSignUpFailure(resp.code, resp.message)
+                    1000 -> signUpView.onSignUpSuccess(code, resp.result!!)
+                    else -> signUpView.onSignUpFailure(code, resp.message)
                 }
             }
 
@@ -29,4 +29,23 @@ class AuthService {
 
         })
     }
+
+    fun signUpSecond(jwt: String, user: User) {
+        val authService = getRetrofit().create(AuthRetrofitInterface::class.java)
+        authService.signUpSecond(jwt, user).enqueue(object : Callback<AuthResponse> {
+            override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
+                val resp: AuthResponse = response.body()!!
+                when (val code = resp.code) {
+                    1000 -> signUpView.onSignUpSuccess(code, resp.result!!)
+                    else -> signUpView.onSignUpFailure(code, resp.message)
+                }
+            }
+
+            override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
+                Log.d("OKOK/SIGNUP/FAILURE", t.message.toString())
+            }
+
+        })
+    }
+
 }

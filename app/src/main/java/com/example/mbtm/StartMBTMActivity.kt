@@ -1,18 +1,14 @@
 package com.example.mbtm
 
 import android.content.Intent
-import android.content.res.ColorStateList
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.example.mbtm.databinding.ActivityStartMbtmBinding
 import com.example.mbtm.gridRadioGroup.OnCheckedChangeListener
-import java.nio.file.Files.find
 
 
 class StartMBTMActivity : AppCompatActivity() {
@@ -39,6 +35,8 @@ class StartMBTMActivity : AppCompatActivity() {
         binding = ActivityStartMbtmBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initMbtiColor()
+
+        val radioButton = findViewById<RadioButton>(R.id.sign_up_mbti_istj_btn)
 
         val radioGroup: gridRadioGroup = binding.startMbtmRg
 
@@ -76,6 +74,7 @@ class StartMBTMActivity : AppCompatActivity() {
 //                }
             }
 
+
         })
 
         binding.startStartBtn.setOnClickListener {
@@ -85,7 +84,7 @@ class StartMBTMActivity : AppCompatActivity() {
                 val userMbti: String = (findViewById<RadioButton>(binding.startMbtmRg.checkedCheckableImageButtonId)).text as String
 //                userMbti = binding.startMbtmRg.checkedCheckableImageButtonId.text
                 Toast.makeText(this, userMbti + "이시군요", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, FirstActivity::class.java))
+//                startActivity(Intent(this, FirstActivity::class.java))
             }
         }
 

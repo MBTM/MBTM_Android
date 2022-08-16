@@ -16,7 +16,9 @@ class MainActivity : AppCompatActivity() {
 ////            val editor = pref.edit()
 ////            editor.putBoolean("checkFirst", true)
 //            editor.commit()
-            startActivity(Intent(this, StartMBTMActivity::class.java))
+        startActivity(Intent(this, FirstActivity::class.java))
+//        val fragment_mbti = SignUpMbtiFragment()
+//        supportFragmentManager.beginTransaction().replace(R.id.sign_up_mbti_fragment, fragment_mbti).commit()
 //        }
     }
 }
