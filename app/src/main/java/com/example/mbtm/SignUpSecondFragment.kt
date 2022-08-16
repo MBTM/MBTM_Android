@@ -79,8 +79,7 @@ class SignUpSecondFragment : Fragment(), SignUpView {
         when(code) {
             1000 -> {
                 Toast.makeText(activity, "로그인 입력에 성공하였습니다", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(activity, StartMBTMActivity::class.java))
-//                navController.navigate(R.id.action_secondFragment_to_mbtiFragment)
+                navController.navigate(R.id.action_secondFragment_to_mbtiFragment)
             }
         }
     }

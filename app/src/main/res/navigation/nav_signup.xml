@@ -20,13 +20,16 @@
         android:name="com.example.mbtm.SignUpSecondFragment"
         android:label="fragment_sign_up_second"
         tools:layout="@layout/fragment_sign_up_second">
+        <action
+            android:id="@+id/action_secondFragment_to_mbtiFragment"
+            app:destination="@id/sign_up_mbti_fragment" />
 
     </fragment>
 
-<!--    <fragment-->
-<!--        android:id="@+id/sign_up_mbti_fragment"-->
-<!--        android:name="com.example.mbtm.SignUpMbtiFragment"-->
-<!--        android:label="fragment_sign_up_mbti"-->
-<!--        tools:layout="@layout/fragment_sign_up_mbti" />-->
+    <fragment
+        android:id="@+id/sign_up_mbti_fragment"
+        android:name="com.example.mbtm.SignUpMbtiFragment"
+        android:label="fragment_sign_up_mbti"
+        tools:layout="@layout/fragment_sign_up_mbti" />
 
 </navigation>

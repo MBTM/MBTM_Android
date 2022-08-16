@@ -43,35 +43,20 @@ class StartMBTMActivity : AppCompatActivity() {
         binding.startMbtmRg.setOnCheckedChangeListener(object : OnCheckedChangeListener{
 
             override fun onCheckedChanged(group: gridRadioGroup?, checkedId: Int) {
-//                val prevRadioButton = findViewById<RadioButton>(prev.toInt())
-//                Log.d("okok/", prev)
-//                radioButton.setBackground
+                // checkedId -> Radio Group 에서 선택한 id
+
+                // 다른 선택지를 선택했었다면, 새롭게 선택할 때 기존 선택지 색 되돌리기
                 if (::prev.isInitialized) {
                     val prevRadioButton = findViewById<RadioButton>(prev.toInt())
                     val prevRadioButtonColor = "#33" + colorArray[mbtiArray.indexOf(prevRadioButton.text)]
-//                    Log.d("OKOK/FIND", find<String>(colorArray, prevRadioButton.text).toString())
-
                     prevRadioButton.setBackgroundColor(Color.parseColor(prevRadioButtonColor))
-//                    prevRadioButton.setBackgroundResource(R.drawable.background_mbti_select)
-//
-//                    prevRadioButton.setBackgroundResource(R.drawable.background_mbti_selector);
-//                    prevRadioButton.setBackgroundColor(Color.parseColor("#dca8c3"));
-//                    prevRadioButton.setBackgroundColor(getResources().getColor(androidx.appcompat.R.color.material_blue_grey_800));
-
                 }
+
+                // 선택시 radio Button 의 background color 변경
                 prev = checkedId.toString()
                 val radioButton = findViewById<RadioButton>(checkedId)
                 val radioButtonColor = "#99" + colorArray[mbtiArray.indexOf(radioButton.text)]
-//                radioButton.buttonTintList =
-//                    ColorStateList.valueOf(ContextCompat.getColor(this@StartMBTMActivity, R.color.darker_gray))
                 radioButton.setBackgroundColor(Color.parseColor(radioButtonColor))
-//                radioButton.setTextColor(Color.parseColor("#FFFFFF"))
-//                Log.d("OKOK/MBTI_ID/", mbtiArray[checkedId + 1] + binding.signUpMbtiIstjBtn.text)
-//                if (checkedId == R.id.sign_up_mbti_istj_btn){
-//
-//                    Log.d("OKOK/MBTI_ID/", R.id.sign_up_mbti_istj_btn.toString())
-//                    Log.d("OKOK/MBTI_ID/", R.id.sign_up_mbti_isfj_btn.toString())
-//                }
             }
 
 
