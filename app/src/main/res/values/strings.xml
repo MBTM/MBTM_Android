@@ -6,6 +6,7 @@
     <string name="signup">회원가입</string>
     <string name="login">로그인</string>
     <string name="enter_name">닉네임 입력</string>
+    <string name="enter_email">이메일 주소 입력</string>
     <string name="enter_phone">전화번호 입력</string>
     <string name="nickname">닉네임</string>
     <string name="phone">휴대폰 번호</string>

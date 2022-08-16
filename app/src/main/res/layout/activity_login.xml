@@ -37,7 +37,9 @@
         android:layout_marginBottom="60dp"
         android:width="320dp"
         android:height="48dp"
-        android:hint="패스워드" />
+        android:hint="패스워드"
+        android:inputType="textPassword"
+        />
 
     <TextView
         android:id="@+id/login_login_btn"
@@ -71,6 +73,7 @@
             android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/setting_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"

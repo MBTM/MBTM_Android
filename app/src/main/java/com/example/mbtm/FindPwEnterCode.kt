@@ -1,16 +1,25 @@
 package com.example.mbtm
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.mbtm.databinding.ActivityFindIdInputBinding
+import com.example.mbtm.databinding.ActivityFindPwEnterCodeBinding
 
 class FindPwEnterCode : AppCompatActivity() {
+
+    private lateinit var binding: ActivityFindPwEnterCodeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_find_pw_enter_code)
+
+        binding = ActivityFindPwEnterCodeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.getProveCodeTv.setOnClickListener {
+            val intent = Intent(this, FindPwChangePw::class.java)
+            startActivity(intent)
+        }
     }
 
-    binding.get_code_tv.setOnClickListener({
-        val intent = Intent(this, FindPwChangePw::class.java)
-        startActivity(intent)
-    })
 }

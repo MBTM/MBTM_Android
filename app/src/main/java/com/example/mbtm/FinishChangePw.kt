@@ -1,21 +1,29 @@
 package com.example.mbtm
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.mbtm.databinding.ActivityFindIdFinishChangePwBinding
+import com.example.mbtm.databinding.ActivityFindIdInputBinding
 
 class FinishChangePw : AppCompatActivity() {
+
+    lateinit var binding: ActivityFindIdFinishChangePwBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_find_id_finish_change_pw)
+        binding = ActivityFindIdFinishChangePwBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        binding.first_findId_idchangepw_btn.setOnClickListener({
-            val intent = Intent(this, FinishChangePw::class.java)
+        binding.firstFindIdFinishChangePwBtn.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
-        })
+        }
 
-        binding.first_findId_idchangepw_btn.setOnClickListener({
-            val intent = Intent(this, FinishChangePw::class.java)
+        binding.gotomainFinishpwTv.setOnClickListener {
+            val intent = Intent(this, FirstActivity::class.java)
             startActivity(intent)
-        })
+        }
     }
 }

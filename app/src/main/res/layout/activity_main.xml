@@ -6,14 +6,221 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
 
+    <TextView
+        android:id="@+id/first_app_title_entercode_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="43dp"
+        android:text="@string/title"
+        android:textColor="#5D5FEF"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/best_main_tv"
+        android:layout_width="136dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="136dp"
+        android:text="가장 인기있는 BEST"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/best_more_tv"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="139dp"
+        android:text="더보기"
+        android:textSize="14dp"
+        android:textColor="#A5A5A5"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_best"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/best_main_tv">
+
+        <TextView
+            android:text="♥"
+            android:textAlignment="textEnd"
+            android:layout_width="144dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_home"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:text="♥"
+            android:textAlignment="textEnd"
+            android:layout_width="144dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_home"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:text="♥"
+            android:textAlignment="textEnd"
+            android:layout_width="144dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_home"
+            android:layout_marginLeft="20dp"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/popular_main_tv"
+        android:layout_width="136dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:text="지금 뜨는 중인"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_best" />
+
+    <TextView
+        android:id="@+id/popular_more_tv"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="35dp"
+        android:text="더보기"
+        android:textSize="14dp"
+        android:textColor="#A5A5A5"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_best" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_popular"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popular_main_tv">
+
+        <TextView
+            android:text="♥"
+            android:textAlignment="textEnd"
+            android:layout_width="144dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_home"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:text="♥"
+            android:textAlignment="textEnd"
+            android:layout_width="144dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_home"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:text="♥"
+            android:textAlignment="textEnd"
+            android:layout_width="144dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_home"
+            android:layout_marginLeft="20dp"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/like_main_tv"
+        android:layout_width="136dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:text="내가 좋아할것 같은"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_popular" />
+
+    <TextView
+        android:id="@+id/like_more_tv"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="35dp"
+        android:text="더보기"
+        android:textSize="14dp"
+        android:textColor="#A5A5A5"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_popular" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_like"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/like_main_tv">
+
+        <TextView
+            android:text="♥"
+            android:textAlignment="textEnd"
+            android:layout_width="144dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_home"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:text="♥"
+            android:textAlignment="textEnd"
+            android:layout_width="144dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_home"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:text="♥"
+            android:textAlignment="textEnd"
+            android:layout_width="144dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_home"
+            android:layout_marginLeft="20dp"
+            />
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mbtm">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,35 +15,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MBTM"
         tools:targetApi="31">
-
         <activity
-            android:name=".FindPwChangePw"
-            android:exported="true" />
+            android:name=".HomeActivity"
+            android:exported="false" />
         <activity
-            android:name=".FindPwEnterCode"
-            android:exported="true" />
-        <activity
-            android:name=".FindPwGetCode"
-            android:exported="true" />
-        <activity
-            android:name=".FinishChangePw"
-            android:exported="true" />
+            android:name=".FindIdFinish"
+            android:exported="false" />
         <activity
             android:name=".FindIdChangePw"
-            android:exported="true" />
+            android:exported="false" />
         <activity
-            android:name=".ui.login.FindIdFinish"
-            android:exported="true"
-            android:label="@string/title_activity_find_id_finish" />
+            android:name=".FindPwChangePw"
+            android:exported="false" />
         <activity
-            android:name=".Find_id_finish"
-            android:exported="true" />
+            android:name=".FindPwEnterCode"
+            android:exported="false" />
         <activity
-            android:name=".findIdInput"
-            android:exported="true" />
+            android:name=".FindPwGetCode"
+            android:exported="false" />
+        <activity
+            android:name=".FinishChangePw"
+            android:exported="false" />
+        <activity
+            android:name=".FindIdInput"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".FirstActivity"
             android:exported="true" />
