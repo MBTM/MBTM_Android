@@ -1,5 +1,6 @@
 package com.example.mbtm
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
@@ -10,13 +11,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.mbtm.databinding.FragmentSignUpMbtiBinding
 import com.example.mbtm.gridRadioGroup.OnCheckedChangeListener
 
 
-class SignUpMbtiFragment : Fragment() {
+class SignUpMbtiFragment : Fragment(), SignUpView  {
 
     val mbtiArray = arrayOf(
         "ISTJ", "ISFJ", "INFJ", "INTJ", "ISTP", "ISFP",
@@ -30,13 +32,16 @@ class SignUpMbtiFragment : Fragment() {
         "A8C740", "DF3E74", "1D3A65", "DD5827"
     )
 
+
+    lateinit var navController: NavController
     lateinit var binding: FragmentSignUpMbtiBinding
-    lateinit var userMbti: String
     lateinit var prev: String
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 
+        super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
         binding.startMbtmRg.setOnCheckedChangeListener(object : OnCheckedChangeListener {
 
             override fun onCheckedChanged(group: gridRadioGroup?, checkedId: Int) {
@@ -53,7 +58,7 @@ class SignUpMbtiFragment : Fragment() {
                 radioButton.setBackgroundColor(Color.parseColor(radioButtonColor))
             }
         })
-        super.onViewCreated(view, savedInstanceState)
+
     }
 
 
@@ -70,6 +75,7 @@ class SignUpMbtiFragment : Fragment() {
                 val userMbti: String =
                     (requireView().findViewById<RadioButton>(binding.startMbtmRg.checkedCheckableImageButtonId)).text as String
                 Toast.makeText(activity, userMbti + "이시군요", Toast.LENGTH_SHORT).show()
+                signUpMbti(userMbti)
             }
         }
         binding.startTestBtn.setOnClickListener {
@@ -77,6 +83,42 @@ class SignUpMbtiFragment : Fragment() {
             i.data = Uri.parse("https://www.16personalities.com/ko/")
             startActivity(i)
         }
+
         return binding.root
+    }
+
+    private fun signUpMbti(userMbti: String) {
+        val authService = AuthService()
+        authService.setSignUpView(this)
+        authService.signUpMbti(getJwt(), getUser(userMbti))
+    }
+
+    private fun getUser(userMbti: String): User {
+        val userIdx: Int = getUserIdx()
+        val mbti: String = userMbti
+        return User(userIdx = userIdx, mbti = mbti)
+    }
+
+    private fun getJwt(): String {
+        val spf = requireActivity().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        return spf.getString("jwt", "")!!
+    }
+
+    private fun getUserIdx(): Int {
+        val spf = requireActivity().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        return spf.getInt("userIdx", 0)
+    }
+
+    override fun onSignUpSuccess(code: Int, result: Result) {
+        when(code) {
+            1000 -> {
+                Toast.makeText(activity, "mbti 입력에 성공하였습니다", Toast.LENGTH_SHORT).show()
+                navController.navigate(R.id.action_mbtiFragment_to_finishFragment)
+            }
+        }
+    }
+
+    override fun onSignUpFailure(code: Int, message: String) {
+        Log.d("OKOK/NICKNAME/FAILURE", message)
     }
 }

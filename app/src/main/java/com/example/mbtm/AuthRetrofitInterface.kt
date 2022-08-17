@@ -11,4 +11,7 @@ interface AuthRetrofitInterface {
 
     @POST("/users/nickName")
     fun signUpSecond(@Header("X-ACCESS-TOKEN") jwt: String, @Body user: User) : Call<AuthResponse>
+
+    @POST("/users/mbti")
+    fun signUpMbti(@Header("X-ACCESS-TOKEN") jwt: String, @Body user: User) : Call<AuthResponse>
 }
