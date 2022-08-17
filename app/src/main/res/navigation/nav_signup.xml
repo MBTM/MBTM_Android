@@ -30,6 +30,18 @@
         android:id="@+id/sign_up_mbti_fragment"
         android:name="com.example.mbtm.SignUpMbtiFragment"
         android:label="fragment_sign_up_mbti"
-        tools:layout="@layout/fragment_sign_up_mbti" />
+        tools:layout="@layout/fragment_sign_up_mbti" >
+        <action
+            android:id="@+id/action_mbtiFragment_to_finishFragment"
+            app:destination="@id/sign_up_finish_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/sign_up_finish_fragment"
+        android:name="com.example.mbtm.SignUpFinishFragment"
+        android:label="fragment_sign_up_finish"
+        tools:layout="@layout/fragment_sign_up_finish" >
+    </fragment>
+
 
 </navigation>

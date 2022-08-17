@@ -48,4 +48,22 @@ class AuthService {
         })
     }
 
+    fun signUpMbti(jwt: String, user: User) {
+        val authService = getRetrofit().create(AuthRetrofitInterface::class.java)
+        authService.signUpMbti(jwt, user).enqueue(object : Callback<AuthResponse> {
+            override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
+                val resp: AuthResponse = response.body()!!
+                when (val code = resp.code) {
+                    1000 -> signUpView.onSignUpSuccess(code, resp.result!!)
+                    else -> signUpView.onSignUpFailure(code, resp.message)
+                }
+            }
+
+            override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
+                Log.d("OKOK/SIGNUP/FAILURE", t.message.toString())
+            }
+
+        })
+    }
+
 }
