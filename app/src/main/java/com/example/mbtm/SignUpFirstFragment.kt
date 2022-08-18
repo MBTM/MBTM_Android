@@ -110,6 +110,7 @@ class SignUpFirstFragment : Fragment(), SignUpView {
     override fun onSignUpFailure(code: Int, message: String) {
 
         binding.signUpIdErrorTv.visibility = View.GONE
+        binding.signUpPasswordErrorTv.visibility = View.GONE
         binding.signUpPasswordCheckErrorTv.visibility = View.GONE
         binding.signUpEmailErrorTv.visibility = View.GONE
         binding.signUpPhoneErrorTv.visibility = View.GONE
@@ -122,6 +123,11 @@ class SignUpFirstFragment : Fragment(), SignUpView {
             2032 -> {
                 binding.signUpPasswordCheckErrorTv.visibility = View.VISIBLE
                 binding.signUpPasswordCheckErrorTv.text = message
+            }
+
+            2031 -> {
+                binding.signUpPasswordErrorTv.visibility = View.VISIBLE
+                binding.signUpPasswordErrorTv.text = message
             }
             2034, 2038 -> {
                 binding.signUpEmailErrorTv.visibility = View.VISIBLE
