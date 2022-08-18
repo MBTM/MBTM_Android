@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:gravity="center_horizontal|top"
-        android:text="비밀번호가 성공적으로 변경되었어요 \n
-다시 MBTM을 시작해볼까요?"
+        android:text="회원가입이 완료되었어요! \n
+지금 바로 MBTM을 시작해볼까요?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
