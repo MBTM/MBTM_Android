@@ -9,6 +9,8 @@
     android:gravity="center"
     tools:context=".FindIdInput">
 
+
+
     <TextView
         android:id="@+id/first_app_title_input_tv"
         style="@style/appName"
@@ -35,102 +37,113 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/first_app_title_input_tv" />
 
-
-    <TextView
-        android:id="@+id/enter_name_input_tv"
-        android:layout_width="wrap_content"
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/enter_name"
-        android:textColor="#4E4D4D"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@id/nickname_input_et"
-        app:layout_constraintStart_toStartOf="@id/nickname_input_et"
-        />
-
-
-    <EditText
-
-        android:id="@+id/nickname_input_et"
-        style="@style/loginBox"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="286dp"
-        android:width="320dp"
-        android:height="48dp"
-        android:hint="닉네임"
-        android:background="#F5F5F5"
+        android:layout_marginTop="20dp"
+        app:defaultNavHost="true"
+        app:layout_constraintTop_toBottomOf="@id/first_app_sub_title_findid_input_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/first_findId_input_btn"
-        />
+        app:navGraph="@navigation/nav_findid" />
 
-    <TextView
-        android:id="@+id/find_id_nickname_error_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:textColor="#EF5DA8"
-        android:textSize="12sp"
-        android:layout_marginTop="3dp"
-        android:text="닉네임을 입력해 주세요"
-        app:layout_constraintStart_toStartOf="@+id/enter_email_input_tv"
-        app:layout_constraintTop_toBottomOf="@+id/nickname_input_et"/>
-
-    <TextView
-        android:id="@+id/enter_email_input_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/enter_email"
-        android:textColor="#4E4D4D"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@id/login_email_input_et"
-        app:layout_constraintLeft_toLeftOf="@id/login_email_input_et"
-        />
+<!--    <TextView-->
+<!--        android:id="@+id/enter_name_input_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/enter_name"-->
+<!--        android:textColor="#4E4D4D"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/nickname_input_et"-->
+<!--        app:layout_constraintStart_toStartOf="@id/nickname_input_et"-->
+<!--        />-->
 
 
-    <EditText
-        android:id="@+id/login_email_input_et"
-        style="@style/loginBox"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="174dp"
-        android:width="320dp"
-        android:height="48dp"
-        android:hint="이메일"
-        android:background="#F5F5F5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/first_findId_input_btn"
-        />
+<!--    <EditText-->
 
-    <TextView
-        android:id="@+id/find_id_email_error_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:textColor="#EF5DA8"
-        android:textSize="12sp"
-        android:text="이메일을 입력해 주세요"
-        android:layout_marginTop="3dp"
-        app:layout_constraintStart_toStartOf="@+id/enter_email_input_tv"
-        app:layout_constraintTop_toBottomOf="@+id/login_email_input_et"/>
+<!--        android:id="@+id/nickname_input_et"-->
+<!--        style="@style/loginBox"-->
+<!--        android:layout_width="320dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginBottom="286dp"-->
+<!--        android:width="320dp"-->
+<!--        android:height="48dp"-->
+<!--        android:hint="닉네임"-->
+<!--        android:background="#F5F5F5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/first_findId_input_btn"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/find_id_nickname_error_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        android:textColor="#EF5DA8"-->
+<!--        android:textSize="12sp"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:text="닉네임을 입력해 주세요"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/enter_email_input_tv"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/nickname_input_et"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/enter_email_input_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/enter_email"-->
+<!--        android:textColor="#4E4D4D"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/login_email_input_et"-->
+<!--        app:layout_constraintLeft_toLeftOf="@id/login_email_input_et"-->
+<!--        />-->
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/login_email_input_et"-->
+<!--        style="@style/loginBox"-->
+<!--        android:layout_width="320dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginBottom="174dp"-->
+<!--        android:width="320dp"-->
+<!--        android:height="48dp"-->
+<!--        android:hint="이메일"-->
+<!--        android:background="#F5F5F5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/first_findId_input_btn"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/find_id_email_error_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        android:textColor="#EF5DA8"-->
+<!--        android:textSize="12sp"-->
+<!--        android:text="이메일을 입력해 주세요"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/enter_email_input_tv"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/login_email_input_et"/>-->
 
 
 
 
-    <TextView
-        android:id="@+id/first_findId_input_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:width="320dp"
-        android:height="48dp"
-        style="@style/findIdButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+<!--    <TextView-->
+<!--        android:id="@+id/first_findId_input_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="24dp"-->
+<!--        android:width="320dp"-->
+<!--        android:height="48dp"-->
+<!--        style="@style/findIdButton"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.88" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

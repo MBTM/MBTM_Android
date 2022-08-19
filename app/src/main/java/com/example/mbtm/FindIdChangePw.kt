@@ -27,7 +27,7 @@ class FindIdChangePw : AppCompatActivity() {
 
 
         binding.firstFindIdIdChangepwBtn.setOnClickListener {
-            val intent = Intent(this, FindIdFinish::class.java)
+            val intent = Intent(this, FinishChangePw::class.java)
             startActivity(intent)
         }
 

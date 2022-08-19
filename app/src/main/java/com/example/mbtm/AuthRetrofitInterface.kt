@@ -8,12 +8,12 @@ import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
 
+
 interface AuthRetrofitInterface {
 
     @POST("/users/searchId")
-    fun signUp(@Body user: User): Call<AuthResponse>
+    fun findId(@Body user: User): Call<AuthResponse>
 
 
 
 }
-

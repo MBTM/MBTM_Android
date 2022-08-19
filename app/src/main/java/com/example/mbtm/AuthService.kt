@@ -4,7 +4,7 @@ import android.util.Log
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
+import javax.xml.transform.Result
 class AuthService {
     private lateinit var findIdView: FindIdView
 
@@ -17,12 +17,14 @@ class AuthService {
 
         val findIdService = getRetrofit().create(AuthRetrofitInterface::class.java)
 
-        findIdService.signUp(user).enqueue(object : Callback<AuthResponse> {
+        findIdService.findId(user).enqueue(object : Callback<AuthResponse> {
             override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
-                Log.d("Ytemp", "asdf")
+                Log.d("Ytemp", response.toString())
+
 
                 val resp: AuthResponse = response.body()!!
-                Log.d("go/code", resp.code.toString())
+
+                Log.d("go/code", resp.result!!.id)
                 when (val code = resp.code) {
 
                     1000 -> findIdView.onFindIdSuccess(code, resp.result!!)
