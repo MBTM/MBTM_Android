@@ -2,6 +2,7 @@ package com.example.mbtm
 
 import android.app.ProgressDialog.show
 import android.content.Context.MODE_PRIVATE
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
@@ -12,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.mbtm.databinding.ActivityFindPwEnterCodeBinding
 import com.example.mbtm.databinding.FragmentFindIdFinishBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -33,9 +35,23 @@ class FindIdFinishFragment : Fragment() {
         binding = FragmentFindIdFinishBinding.inflate(inflater, container, false)
         Log.d("Gabang/Finish", "finish")
         // Inflate the layout for this fragment
+
+        binding.gotologinFinishidBtn.setOnClickListener {
+            val intent = Intent(getActivity(), LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.resetpwFinishIdBtn.setOnClickListener {
+            val intent = Intent(getActivity(), FindIdChangePw::class.java)
+            startActivity(intent)
+        }
+
         return binding.root
 
+
+
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
