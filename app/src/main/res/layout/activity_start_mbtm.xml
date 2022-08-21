@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".StartMBTMActivity">
+
+
+        <TextView
+            android:id="@+id/start_mbtm_title_tv"
+            style="@style/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <TextView
+            android:id="@+id/start_mbtm_sub_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="12dp"
+            android:text="나의 MBTI 유형을 선택해주세요"
+            style="@style/subTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start_mbtm_title_tv" />
+
+
+        <com.example.mbtm.gridRadioGroup
+            android:id="@+id/start_mbtm_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            app:columnCount="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start_mbtm_sub_title_tv">
+
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_istj_btn"
+                style="@style/signUpMbtiIstj" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_isfj_btn"
+                style="@style/signUpMbtiIsfj" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_infj_btn"
+                style="@style/signUpMbtiInfj" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_intj_btn"
+                style="@style/signUpMbtiIntj" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_istp_btn"
+                style="@style/signUpMbtiIstp" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_isfp_btn"
+                style="@style/signUpMbtiIsfp" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_infp_btn"
+                style="@style/signUpMbtiInfp" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_intp_btn"
+                style="@style/signUpMbtiIntp" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_estp_btn"
+                style="@style/signUpMbtiEstp" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_esfp_btn"
+                style="@style/signUpMbtiEsfp" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_enfp_btn"
+                style="@style/signUpMbtiEnfp" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_entp_btn"
+                style="@style/signUpMbtiEntp" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_estj_btn"
+                style="@style/signUpMbtiEstj" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_esfj_btn"
+                style="@style/signUpMbtiEsfj" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_enfj_btn"
+                style="@style/signUpMbtiEnfj" />
+
+            <RadioButton
+                android:id="@+id/sign_up_mbti_entj_btn"
+                style="@style/signUpMbtiEntj" />
+
+        </com.example.mbtm.gridRadioGroup>
+
+
+        <!--        <com.example.mbtm.radioGridGroup-->
+        <!--            android:id="@+id/grid_test"-->
+        <!--            xmlns:grid="http://schemas.android.com/apk/res-auto"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            grid:columnCount="4">-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIstj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIsfj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiInfj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIntj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIstp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIsfp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiInfp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIntp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEstp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEsfp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEnfp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEntp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEstj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEsfj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEnfj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEntj" />-->
+
+        <!--        </com.example.mbtm.radioGridGroup>-->
+
+        <!--                <RadioGroup-->
+        <!--                    android:id="@+id/start_mbtm_rg"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_marginBottom="80dp"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintTop_toBottomOf="@id/start_mbtm_sub_title_tv">-->
+
+        <!--            &lt;!&ndash;            <GridLayout&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:columnCount="4"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:rowCount="4">&ndash;&gt;-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIstj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIsfj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiInfj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIntj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIstp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIsfp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiInfp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiIntp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEstp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEsfp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEnfp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEntp" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEstj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEsfj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEnfj" />-->
+
+        <!--            <RadioButton style="@style/signUpMbtiEntj" />-->
+        <!--            &lt;!&ndash;            </GridLayout>&ndash;&gt;-->
+
+        <!--        </RadioGroup>-->
+
+
+        <!--    <GridLayout-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_gravity="center"-->
+        <!--        android:layout_marginBottom="80dp"-->
+        <!--        android:columnCount="4"-->
+        <!--        android:rowCount="4">-->
+
+        <!--            <TextView style="@style/signUpMbtiIstj" />-->
+
+        <!--            <TextView style="@style/signUpMbtiIsfj" />-->
+
+        <!--            <TextView style="@style/signUpMbtiInfj" />-->
+
+        <!--            <TextView style="@style/signUpMbtiIntj" />-->
+
+        <!--            <TextView style="@style/signUpMbtiIstp" />-->
+
+        <!--        <TextView style="@style/signUpMbtiIsfp" />-->
+
+        <!--        <TextView style="@style/signUpMbtiInfp" />-->
+
+        <!--        <TextView style="@style/signUpMbtiIntp" />-->
+
+        <!--        <TextView style="@style/signUpMbtiEstp" />-->
+
+        <!--        <TextView style="@style/signUpMbtiEsfp" />-->
+
+        <!--        <TextView style="@style/signUpMbtiEnfp" />-->
+
+        <!--        <TextView style="@style/signUpMbtiEntp" />-->
+
+        <!--        <TextView style="@style/signUpMbtiEstj" />-->
+
+        <!--        <TextView style="@style/signUpMbtiEsfj" />-->
+
+        <!--        <TextView style="@style/signUpMbtiEnfj" />-->
+
+        <!--        <TextView style="@style/signUpMbtiEntj" />-->
+
+        <!--    </GridLayout>-->
+
+        <TextView
+            android:id="@+id/start_start_btn"
+            style="@style/purpleButton"
+            android:layout_marginBottom="8dp"
+            android:text="MBTM 시작하기" />
+
+        <TextView
+            android:id="@+id/start_test_btn"
+            style="@style/whitePurpleButton"
+            android:text="MBTI를 아직 몰라요" />
+
+
+    </LinearLayout>
+</ScrollView>
