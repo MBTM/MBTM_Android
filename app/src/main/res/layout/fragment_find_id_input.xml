@@ -80,11 +80,11 @@
         android:id="@+id/enter_email_input_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
         android:text="@string/enter_email"
         android:textColor="#4E4D4D"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@id/login_email_input_et"
-        app:layout_constraintLeft_toLeftOf="@id/login_email_input_et"
+        app:layout_constraintTop_toBottomOf="@id/find_id_nickname_error_tv"
+        app:layout_constraintStart_toStartOf="@id/login_email_input_et"
         />
 
 
@@ -93,14 +93,14 @@
         style="@style/loginBox"
         android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="174dp"
         android:width="320dp"
         android:height="48dp"
         android:hint="이메일"
+        android:layout_marginTop="8dp"
         android:background="#F5F5F5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/first_findId_input_btn"
+        app:layout_constraintTop_toBottomOf="@id/enter_email_input_tv"
         />
 
     <TextView

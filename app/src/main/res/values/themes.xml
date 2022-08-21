@@ -63,7 +63,7 @@
     </style>
 
     <style name="findIdButton">
-        <item name="android:background">@drawable/button_login_background</item>
+        <item name="android:background">@drawable/button_purple_background</item>
         <item name="android:text">@string/sub_title_find_id</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
@@ -71,7 +71,7 @@
     </style>
 
     <style name="complete">
-        <item name="android:background">@drawable/button_login_background</item>
+        <item name="android:background">@drawable/button_purple_background</item>
         <item name="android:text">@string/check</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
@@ -79,7 +79,7 @@
     </style>
 
     <style name="goToLogin">
-        <item name="android:background">@drawable/button_login_background</item>
+        <item name="android:background">@drawable/button_purple_background</item>
         <item name="android:text">@string/go_login</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
@@ -87,7 +87,7 @@
     </style>
 
     <style name="getCode">
-        <item name="android:background">@drawable/button_login_background</item>
+        <item name="android:background">@drawable/button_purple_background</item>
         <item name="android:text">@string/get_code</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>

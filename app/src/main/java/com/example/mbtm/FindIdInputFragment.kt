@@ -127,14 +127,14 @@ class FindIdInputFragment : Fragment(), FindIdView {
         binding.findIdNicknameErrorTv.visibility = View.GONE
 
             when (code) {
-                2033, 2039->{
+                2039->{
                     binding.findIdNicknameErrorTv.visibility = View.VISIBLE
                     binding.findIdNicknameErrorTv.text = message
                 }
                 2034 -> {
                     // 실패시 나오는것도 나오도록 하기
-                    this.binding.findIdNicknameErrorTv.visibility = View.VISIBLE
-                    this.binding.findIdNicknameErrorTv.text = message
+                    this.binding.findIdEmailErrorTv.visibility = View.VISIBLE
+                    this.binding.findIdEmailErrorTv.text = message
                 }
             }
 

@@ -79,12 +79,13 @@ class AuthService {
 
         findIdService.findId(user).enqueue(object : Callback<AuthResponse> {
             override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
-                Log.d("Ytemp", response.toString())
+                Log.d("Gabang/response", response.toString())
 
 
                 val resp: AuthResponse = response.body()!!
 
-                Log.d("go/code", resp.result!!.id)
+                Log.d("go/code", resp.code.toString())
+
                 when (val code = resp.code) {
 
                     1000 -> findIdView.onFindIdSuccess(code, resp.result!!)

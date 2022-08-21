@@ -160,12 +160,9 @@
 
     <TextView
         android:id="@+id/get_prove_code_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:width="320dp"
-        android:height="48dp"
-        style="@style/getCode"
+        style="@style/purpleButton"
+        android:text="인증코드 받기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
