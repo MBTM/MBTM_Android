@@ -1,11 +1,16 @@
 package com.example.mbtm
 
+import retrofit2.http.Header
 import retrofit2.Call
 import retrofit2.http.Body
-import retrofit2.http.Header
 import retrofit2.http.POST
 
+
 interface AuthRetrofitInterface {
+
+    @POST("/users/searchId")
+    fun findId(@Body user: User): Call<AuthResponse>
+
     @POST("/users")
     fun signUpFirst(@Body user:User): Call<AuthResponse>
 
@@ -14,4 +19,6 @@ interface AuthRetrofitInterface {
 
     @POST("/users/mbti")
     fun signUpMbti(@Header("X-ACCESS-TOKEN") jwt: String, @Body user: User) : Call<AuthResponse>
+
+
 }

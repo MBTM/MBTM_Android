@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_findid"
+    app:startDestination="@id/find_id_first_fragment">
+
+
+    <fragment
+        android:id="@+id/find_id_first_fragment"
+        android:name="com.example.mbtm.FindIdInputFragment"
+        android:label="fragment_find_id_first"
+        tools:layout="@layout/fragment_find_id_input" >
+        <action
+            android:id="@+id/action_firstFragment_to_finishFragment"
+            app:destination="@id/find_id_finish_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/find_id_finish_fragment"
+        android:name="com.example.mbtm.FindIdFinishFragment"
+        android:label="fragment_find_id_finish"
+        tools:layout="@layout/fragment_find_id_finish" >
+    </fragment>
+<!--        <action-->
+<!--            android:id="@+id/action_secondFragment_to_mbtiFragment"-->
+<!--            app:destination="@id/sign_up_mbti_fragment" />-->
+
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/sign_up_mbti_fragment"-->
+<!--        android:name="com.example.mbtm.SignUpMbtiFragment"-->
+<!--        android:label="fragment_sign_up_mbti"-->
+<!--        tools:layout="@layout/fragment_sign_up_mbti" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_mbtiFragment_to_finishFragment"-->
+<!--            app:destination="@id/sign_up_finish_fragment"/>-->
+<!--    </fragment>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/sign_up_finish_fragment"-->
+<!--        android:name="com.example.mbtm.SignUpFinishFragment"-->
+<!--        android:label="fragment_sign_up_finish"-->
+<!--        tools:layout="@layout/fragment_sign_up_finish" >-->
+<!--    </fragment>-->
+
+
+</navigation>

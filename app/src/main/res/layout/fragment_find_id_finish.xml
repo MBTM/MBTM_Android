@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindIdFinishFragment">
+
+<!--    <TextView-->
+<!--        android:id="@+id/first_app_title_finishid_tv"-->
+<!--        style="@style/appName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/title"-->
+<!--        android:layout_marginBottom="531dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/first_app_sub_title_idchangepw_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="7dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="아이디 찾기"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/first_app_title_finishid_tv"-->
+
+<!--        />-->
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_host_fragment"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:defaultNavHost="true"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/first_app_sub_title_idchangepw_tv"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:navGraph="@navigation/nav_findId" />-->
+
+    <TextView
+        android:id="@+id/your_id_finishid_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원님의 아이디는"
+        android:textColor="#4E4D4D"
+        android:textSize="20sp"
+        android:layout_marginBottom="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/real_id_finishid_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/main"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/your_id_finishid_tv"
+        app:layout_constraintEnd_toStartOf="@id/ok_finishid_tv"
+        />
+
+    <TextView
+        android:id="@+id/ok_finishid_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="입니다"
+        android:textColor="#4E4D4D"
+        android:textSize="20sp"
+        android:layout_marginLeft="-50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/your_id_finishid_tv"
+        app:layout_constraintTop_toBottomOf="@id/your_id_finishid_tv"
+
+        />
+
+    <TextView
+        android:id="@+id/gotologin_finishid_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="320dp"
+        android:height="48dp"
+        android:layout_marginTop="150dp"
+        style="@style/goToLogin"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/resetpw_finish_id_btn"
+        app:layout_constraintTop_toBottomOf="@id/ok_finishid_tv"
+        app:layout_constraintVertical_bias="0.8" />
+
+
+    <TextView
+        android:id="@+id/resetpw_finish_id_btn"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/reset_pw"
+        style="@style/whitePurpleButton"
+        app:layout_constraintTop_toBottomOf="@id/gotologin_finishid_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

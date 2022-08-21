@@ -14,10 +14,22 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.findIdTv.setOnClickListener{
+            val intent = Intent(this, FindIdInput::class.java)
+            startActivity(intent)
+        }
+
+
+        binding.findPwTv.setOnClickListener{
+            // val intent = Intent(this, FindPwEnterCode::class.java)
+            startActivity(Intent(this, FindPwGetCode::class.java))
+        }
+
         binding.loginSignUpTv.setOnClickListener{
             startActivity(Intent(this, SignUpActivity::class.java))
         }
 
 
     }
+
 }
