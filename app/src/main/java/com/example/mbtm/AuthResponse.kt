@@ -11,9 +11,6 @@ data class AuthResponse(
 
 data class Result(
     @SerializedName(value = "userIdx") var userIdx: Int,
-
     @SerializedName(value = "id") var id: String,
-
-
     @SerializedName(value = "jwt") var jwt: String
 )
