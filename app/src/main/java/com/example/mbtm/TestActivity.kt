@@ -30,6 +30,10 @@ class TestActivity : AppCompatActivity() {
             setResult(RESULT_OK, intent)
             finish()
         }
+
+        binding.testCloseIc.setOnClickListener {
+            finish()
+        }
     }
 
     private fun saveMbti() {
@@ -49,8 +53,6 @@ class TestActivity : AppCompatActivity() {
         val testValue = bundle!!.getString("Url")
 
         webView = findViewById<WebView>(R.id.test_wv)
-
-        binding.testTv.text = testValue
 
         webView.settings.apply {
             javaScriptEnabled = true
