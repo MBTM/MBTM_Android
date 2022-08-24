@@ -4,6 +4,7 @@ import android.util.Log
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 class AuthService {
     private lateinit var findIdView: FindIdView
     private lateinit var signUpView: SignUpView
@@ -13,7 +14,7 @@ class AuthService {
         this.signUpView = signUpView
     }
 
-    fun setFindIdView(findIdView: FindIdView){
+    fun setFindIdView(findIdView: FindIdView) {
         this.findIdView = findIdView
     }
 
@@ -29,7 +30,7 @@ class AuthService {
             }
 
             override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
-                Log.d("OKOK/SIGNUP/FAILURE", t.message.toString())
+                Log.d("OKOK/SIGNUP_FIRST/", t.message.toString())
             }
 
         })
@@ -47,7 +48,7 @@ class AuthService {
             }
 
             override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
-                Log.d("OKOK/SIGNUP/FAILURE", t.message.toString())
+                Log.d("OKOK/SIGNUP_SECOND/", t.message.toString())
             }
 
         })
@@ -65,16 +66,14 @@ class AuthService {
             }
 
             override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
-                Log.d("OKOK/SIGNUP/FAILURE", t.message.toString())
+                Log.d("OKOK/SIGNUP_MBTI/", t.message.toString())
             }
 
         })
     }
 
 
-    fun findId(user:User){
-
-
+    fun findId(user: User) {
         val findIdService = getRetrofit().create(AuthRetrofitInterface::class.java)
 
         findIdService.findId(user).enqueue(object : Callback<AuthResponse> {
@@ -99,7 +98,6 @@ class AuthService {
             override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
                 Log.d("YES/SIGNUP/FAILURE", t.message.toString())
             }
-
 
 
         })

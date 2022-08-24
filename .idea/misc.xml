@@ -21,6 +21,8 @@
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/drawable/login_button_background.xml" value="0.147" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/activity_find_id_change_pw.xml" value="0.1703125" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/activity_find_id_finish_change_pw.xml" value="0.1703125" />
+        <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/activity_find_id_input.xml" value="0.26875" />
+        <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/activity_find_pw_get_code.xml" value="0.26875" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/activity_first.xml" value="0.19610507246376813" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/activity_login.xml" value="0.165" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
@@ -29,6 +31,7 @@
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/activity_test.xml" value="0.1" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/fragment_blank.xml" value="0.24322916666666666" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/fragment_find_id_change_pw.xml" value="0.1703125" />
+        <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/fragment_find_id_finish.xml" value="0.26875" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/fragment_find_id_input.xml" value="0.1703125" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/fragment_sign_up_finish.xml" value="0.165" />
         <entry key="..\:/Users/kosaf888/AndroidStudioProjects/MBTM/app/src/main/res/layout/fragment_sign_up_first.xml" value="0.19479166666666667" />
