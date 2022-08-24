@@ -14,8 +14,7 @@
         style="@style/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
-        android:text="@string/title" />
+        android:layout_marginBottom="56dp" />
 
 
     <EditText

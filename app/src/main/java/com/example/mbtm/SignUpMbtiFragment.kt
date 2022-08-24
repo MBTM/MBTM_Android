@@ -87,7 +87,7 @@ class SignUpMbtiFragment : Fragment(), SignUpView {
     private fun getMbti() {
         val intent = Intent(activity, TestActivity::class.java)
         val bundle = Bundle()
-        bundle.putString("Url", "https://www.16personalities.com/ko/")
+        bundle.putString("Url", "https://www.16personalities.com/ko/무료-성격-유형-검사")
         intent.putExtras(bundle)
         activityResultLauncher.launch(intent)
     }
