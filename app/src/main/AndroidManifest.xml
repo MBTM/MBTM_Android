@@ -16,35 +16,38 @@
         android:theme="@style/Theme.MBTM"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".FindIdChangePwActivity"
             android:exported="false" />
         <activity
-            android:name=".FindIdFinish"
+            android:name=".FindPwChangePwActivity"
             android:exported="false" />
         <activity
-            android:name=".FindIdChangePw"
+            android:name=".FindPwEnterCodeActivity"
             android:exported="false" />
         <activity
-            android:name=".FindPwChangePw"
+            android:name=".FindPwGetCodeActivity"
             android:exported="false" />
         <activity
-            android:name=".FindPwEnterCode"
+            android:name=".FinishChangePwActivity"
             android:exported="false" />
         <activity
-            android:name=".FindPwGetCode"
-            android:exported="false" />
-        <activity
-            android:name=".FinishChangePw"
-            android:exported="false" />
-        <activity
-            android:name=".FindIdInput"
+            android:name=".FindIdInputActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".FirstActivity"
-            android:exported="false" />
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
@@ -55,11 +58,6 @@
             android:name=".MainActivity"
             android:exported="true">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -11,7 +11,7 @@ import retrofit2.Call
 import retrofit2.Response
 
 
-class FindIdInput : AppCompatActivity() {
+class FindIdInputActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityFindIdInputBinding
 

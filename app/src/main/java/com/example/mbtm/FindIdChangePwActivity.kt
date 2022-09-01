@@ -3,15 +3,9 @@ package com.example.mbtm
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.SpannableStringBuilder
-import android.text.TextWatcher
-import android.widget.EditText
-import android.widget.Toast
 import com.example.mbtm.databinding.ActivityFindIdChangePwBinding
-import java.util.regex.Pattern.compile
 
-class FindIdChangePw : AppCompatActivity() {
+class FindIdChangePwActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityFindIdChangePwBinding
 
@@ -27,7 +21,7 @@ class FindIdChangePw : AppCompatActivity() {
 
 
         binding.firstFindIdIdChangepwBtn.setOnClickListener {
-            val intent = Intent(this, FinishChangePw::class.java)
+            val intent = Intent(this, FinishChangePwActivity::class.java)
             startActivity(intent)
         }
 

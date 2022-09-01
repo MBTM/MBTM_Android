@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FindPwChangePw">
+    tools:context=".FindPwChangePwActivity">
 
     <TextView
         android:id="@+id/first_app_title_changepw_tv"

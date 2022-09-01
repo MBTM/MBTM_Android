@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:width="320dp"
         android:height="48dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="209dp"
         style="@style/goToLogin"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/resetpw_finish_id_btn"

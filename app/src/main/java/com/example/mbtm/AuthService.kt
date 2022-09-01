@@ -7,6 +7,7 @@ import retrofit2.Response
 class AuthService {
     private lateinit var findIdView: FindIdView
     private lateinit var signUpView: SignUpView
+    private lateinit var loginView: LoginView
 
 
     fun setSignUpView(signUpView: SignUpView) {
@@ -15,6 +16,9 @@ class AuthService {
 
     fun setFindIdView(findIdView: FindIdView){
         this.findIdView = findIdView
+    }
+    fun setLoginView(loginView: LoginView) {
+        this.loginView = loginView
     }
 
     fun signUpFirst(user: User) {
@@ -97,9 +101,39 @@ class AuthService {
 
             // 네트워크 연결 자체가 실패했을 때
             override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
-                Log.d("YES/SIGNUP/FAILURE", t.message.toString())
+                Log.d("Gabang/SIGNUP/FAILURE", t.message.toString())
             }
 
+
+
+        })
+    }
+
+    // 로그인 구현
+    fun login(user: User) {
+
+        val LoginService = getRetrofit().create(AuthRetrofitInterface::class.java)
+
+        Log.d("Gabang/User", user.toString() )
+
+
+        LoginService.login(user).enqueue(object : Callback<AuthResponse> {
+            override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
+                Log.d("Gabang/login/server", response.body().toString())
+                val resp: AuthResponse = response.body()!!
+
+            //    Log.d("Gabang/login/code", resp.code.toString())
+
+                when (val code = resp.code) {
+
+                    1000 -> loginView.onLoginSuccess(code, resp.result!!)
+                    else -> loginView.onLoginFailure(code, resp.message)
+                }
+            }
+
+            override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
+                Log.d("Gabang/Login/FAILURE", t.message.toString())
+            }
 
 
         })
