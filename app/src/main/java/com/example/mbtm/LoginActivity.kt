@@ -94,7 +94,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
             }
             3014 -> {
                 Log.d("Gabang/login/2030", message)
-                Toast.makeText(this, "없는 아이디거나 비밀번호가 틀렸습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "비밀번호가 틀렸습니다.", Toast.LENGTH_SHORT).show()
             }
             2039 ->{
                 Log.d("Gabang/login/2039", message)
