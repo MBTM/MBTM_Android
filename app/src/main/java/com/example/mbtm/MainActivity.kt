@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), LoginView {
         //startActivity(Intent(this, FirstActivity::class.java))
 //        val fragment_mbti = SignUpMbtiFragment()
 //        supportFragmentManager.beginTransaction().replace(R.id.sign_up_mbti_fragment, fragment_mbti).commit()
-//        }
+//        }/
     }
 
     private fun saveJwt2(jwt: String) {
