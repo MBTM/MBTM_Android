@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.example.mbtm.databinding.ActivityFindIdFinishChangePwBinding
 import com.example.mbtm.databinding.ActivityFindIdInputBinding
 
-class FinishChangePw : AppCompatActivity() {
+class FinishChangePwActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityFindIdFinishChangePwBinding
 

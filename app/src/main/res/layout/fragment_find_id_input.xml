@@ -5,35 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="100dp"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".FindIdInput">
-
-<!--    <TextView-->
-<!--        android:id="@+id/first_app_title_input_tv"-->
-<!--        style="@style/appName"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/title"-->
-<!--        android:layout_marginBottom="531dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/first_app_sub_title_findid_input_tv"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:textStyle="bold"-->
-<!--        android:text="@string/sub_title_find_id"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="16sp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/first_app_title_input_tv" />-->
+    tools:context=".FindIdInputActivity">
 
 
     <TextView
@@ -52,15 +27,11 @@
 
         android:id="@+id/nickname_input_et"
         style="@style/loginBox"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
         android:layout_marginBottom="286dp"
-        android:width="320dp"
-        android:height="48dp"
         android:hint="닉네임"
+        android:inputType="text"
         android:background="#F5F5F5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/first_findId_input_btn"
         app:layout_constraintBottom_toBottomOf="@id/first_findId_input_btn"
         />
 
@@ -91,15 +62,11 @@
     <EditText
         android:id="@+id/login_email_input_et"
         style="@style/loginBox"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:width="320dp"
-        android:height="48dp"
         android:hint="이메일"
+        android:inputType="textEmailAddress"
         android:layout_marginTop="8dp"
         android:background="#F5F5F5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/first_findId_input_btn"
         app:layout_constraintTop_toBottomOf="@id/enter_email_input_tv"
         />
 

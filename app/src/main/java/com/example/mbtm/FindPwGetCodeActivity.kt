@@ -3,12 +3,9 @@ package com.example.mbtm
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View.*
-import androidx.recyclerview.widget.AsyncDifferConfig
-import com.example.mbtm.databinding.ActivityFindIdInputBinding
 import com.example.mbtm.databinding.ActivityFindPwGetCodeBinding
 
-class FindPwGetCode : AppCompatActivity() {
+class FindPwGetCodeActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityFindPwGetCodeBinding
 
@@ -21,7 +18,7 @@ class FindPwGetCode : AppCompatActivity() {
  //       empty()
 
         binding.firstFindPwGetcodeBtn.setOnClickListener {
-            val intent = Intent(this, FindPwEnterCode::class.java)
+            val intent = Intent(this, FindPwEnterCodeActivity::class.java)
             startActivity(intent)
 
         }

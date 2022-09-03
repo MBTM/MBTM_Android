@@ -3,10 +3,9 @@ package com.example.mbtm
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.mbtm.databinding.ActivityFindIdInputBinding
 import com.example.mbtm.databinding.ActivityFindPwEnterCodeBinding
 
-class FindPwEnterCode : AppCompatActivity() {
+class FindPwEnterCodeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFindPwEnterCodeBinding
 
@@ -17,7 +16,7 @@ class FindPwEnterCode : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.getProveCodeTv.setOnClickListener {
-            val intent = Intent(this, FindPwChangePw::class.java)
+            val intent = Intent(this, FindPwChangePwActivity::class.java)
             startActivity(intent)
         }
     }

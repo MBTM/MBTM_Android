@@ -20,5 +20,8 @@ interface AuthRetrofitInterface {
     @POST("/users/mbti")
     fun signUpMbti(@Header("X-ACCESS-TOKEN") jwt: String, @Body user: User) : Call<AuthResponse>
 
+ // 로그인 버튼 구현
+    @POST("/auth/login")
+    fun login(@Body user: User) : Call<AuthResponse>
 
 }
