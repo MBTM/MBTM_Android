@@ -13,6 +13,8 @@ data class AuthResponse(
 
 data class Result(
 
+    @SerializedName(value = "id") var id: String,
+
     @SerializedName(value = "userIdx") var userIdx: Int,
 
     @SerializedName(value = "jwt") var jwt: String

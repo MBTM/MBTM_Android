@@ -25,8 +25,7 @@
             android:layout_marginBottom="12dp"
             android:text="나의 MBTI 유형을 선택해주세요"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/start_mbtm_title_tv" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
         <com.example.mbtm.gridRadioGroup
